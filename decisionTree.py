@@ -13,6 +13,19 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn import metrics
 
 
+# Survived:0代表死亡，1代表存活
+# Pclass:乘客所持票类，有三种值(1,2,3)
+# Name:乘客姓名
+# Sex:乘客性别
+# Age:乘客年龄(有缺失)
+# SibSp:乘客兄弟姐妹/配偶的个数(整数值)
+# Parch:乘客父母/孩子的个数(整数值)
+# Ticket:票号(字符串)
+# Fare:乘客所持票的价格(浮点数，0-500不等)
+# Cabin:乘客所在船舱(有缺失)
+# Embark:乘客登船港口:S、C、Q(有缺失)
+
+
 # 1、采集数据
 print("## Acquire data")
 # 我们首先将训练和测试数据集获取到Pandas DataFrames中。
@@ -84,13 +97,19 @@ train_df[['Parch', 'Survived']].groupby(['Parch'], as_index=False).mean().sort_v
 # 数据可视化
 print("### Visualizing data")
 sns.lineplot(x='SibSp', y='Survived', data=train_df)
+# 图的展示
+plt.show()
 
 grid = sns.FacetGrid(train_df, row='Embarked', height=2.2, aspect=1.6)
 grid.map(sns.pointplot, 'Pclass', 'Survived', 'Sex', palette='deep')
 grid.add_legend()
+# 图的展示
+plt.show()
 
 g = sns.FacetGrid(train_df, col='Survived')
 g.map(plt.hist, 'Age', bins=20)
+# 图的展示
+plt.show()
 
 # 4、再次清理
 print("## Back to cleaning")
@@ -172,4 +191,18 @@ y_pred = tree.predict(x_test)
 print("Accuracy:", metrics.accuracy_score(y_test, y_pred))
 
 
+
+# 决策树：
+#
+# 决策树中采取CART算法，属于最小二乘回归树生成算法。
+#
+# 算法实现步骤：
+#
+# 1）计算现有样本D的基尼指数，之后利用样本中每一个特征A，及A的每一个可能取值a，根据A>=a与A<a将样本分为两部分，并计算Gini(D,A)值
+#
+# 2）找出对应基尼指数最小Gini(D,A)的最优切分特征及取值，并判断是否切分停止条件，否，则输出最优切分点
+#
+# 3）递归调用1）2）
+#
+# 4）生成CART决策树
 
