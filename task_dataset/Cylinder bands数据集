@@ -1,0 +1,81 @@
+Cylinder Bands : Used in decision tree induction for mitigating process delays known as "cylinder bands" in rotogravure printing
+
+气缸带：使用判定树来归纳，减缓气缸带的凸版打印。
+
+https://www.doc88.com/p-850514714440.html
+
+Cylinder Bands Data Set(气缸带数据集)
+    数据摘要:
+Used in decision tree induction for mitigating process delays known
+as Cylinder bands In rotogravure printing
+    中文关键词:
+机器学习,多变量,分类,气缸带,UC.,
+    英文关键词:
+Machine Learning, Multi Varite, Classification, Cylinder Bands, UCI
+    数据格式:
+TEXT
+    数据用途:
+This data is used for classification
+    数据详细介绍:
+Cylinder Bands Data Set
+    Abstract（概要）:
+Used in decision tree induction for mitigating process delays known as"cylinder bands"in
+rotogravure printing
+    Source:
+Creator
+Bob Evans
+RR Donnelley Sons Co
+Gallatin Division 801 Steam Plant Rd
+Gallatin. Tennessee 37066-3396
+(615)452-5170
+Donor: same
+
+    Data Set Information:
+leres the abstract from the above reference
+ABSTRACT: Machine learning tools show significant promise for knowledge acquisition, particularly when human expertise is inadequate. Recently, process delays known as cylinder banding in rotogravure printing were substantially mitigated using control rules discovered by decision tree induction. Our work exemplifies a more general methodology which transforms the knowledge acquisition task from one in which rules are directly elicited from an expert, to one in which a learning system is responsible for rule generation. The primary responsibilities of the human expert are to evaluate the merits of generated rules, and to guide the acquisition and classification of data necessary for machine induction. T hese responsibilities require the expert to do what an expert does best: to exercise his or her expertise. This seems a more natural fit to an experts capabilities than the reauirements of traditional methodologies that experts explicitly enumerate the rules that they employ
+
+    数据集信息:
+这是上述参考文献的摘要
+    摘要：
+    机器学习工具在知识获取方面表现出巨大的潜力，特别是在人类专业知识不足的情况下。
+最近，使用决策树归纳法所发现的控制规则，大大减少了轮转凹版印刷过程中被称为钢瓶捆扎的过程延迟。
+我们的工作举例说明了一种更通用的方法，它将知识获取任务从直接从专家那里获取规则转变为学习系统
+负责规则生成的任务。人类专家的主要职责是评估生成规则的优点，并指导机器感应所需数据的获取和分
+类。这些责任要求专家做专家最擅长的事情：运用他或她的专长。与专家明确列举他们所采用的规则的传
+统方法论相比，这似乎更适合专家的能力
+
+1, timestamp: numeric: 19500101-21001231 -时间戳记
+2. cylinder number: nominal -气缸数
+3. customer: nominal -顾客
+4. job number: nominal -工作编号
+5. grain screened: nominal; yes, no -谷物筛选
+6. ink color: nominal, key, type -墨水颜色
+7. proof on ctd ink: nominal, yes, no -ctd墨水证明
+8. blade mfg: nominal, benton, daetwyler, uddeholm -刀片制造
+9. cylinder division: nominal; gallatin, warsaw, mattoon -气缸划分
+10. paper type: nominal; uncoated, coated, super -纸张类型
+11. ink type: nominal, uncoated, coated, cover -墨水类型
+12. direct steam: nominal; use; yes, no -直接蒸汽
+13. solvent type: nominal, xylol, lactol, naptha, line, other -溶剂类型
+14. type on cylinder: nominal; yes, no -在气缸上键入
+15. press type: nominal; use; 70 wood hoe, 70 motter, 70 albert, 94 motter -按压类型
+16. press: nominal;821,802,813,824,815,816,827,828 -按压
+17. unit number: nominal: 1. 2.3.4.5.6. 10 -单元编号
+18. cylinder size: nominal, catalog, spiegel, tabloid -气缸尺寸
+19. paper mill location: nominal; north us, south us, canadian, scandanavian, mid european -造纸厂位置
+20. plating tank: nominal, 1910, 1911, other -电镀槽
+21. proof cut: numeric: 0-100 -防割
+22. viscosity: numeric: 0-100 23 caliper: numeric, 0-1.0 -黏度
+24. ink temperature: numeric: 5-30 25 humifity: numeric: 5-120 26 roughness: numeric: 0-2 -油墨温度
+27. blade pressure: numeric: 10-75 28 varnish oct: numeric: 0-100 -叶片压力
+29. press speed: numeric; 0-4000 -冲压速度
+30. ink pct: numeric: 0-100 -墨水pct
+31. solvent pct: numeric; 0-100 -溶剂pct
+32. ESA Voltage: numeric; 0-16 -ESA电压
+33. ESA Amperage: numeric; 0-10 -ESA安培
+34. wax: numeric: 0-4.0 -蜡
+35. hardener: numeric: 0-3.0 -硬化剂
+36. roller durometer: numeric: 15-120 -滚筒硬度计
+37. current density: numeric; 20-50 38 anode space ratio: numeric: 70-130 -当前密度
+39. chrome content: numeric: 80-120 -铬含量
+40. band type: nominal; class; band, no band -乐队类型
